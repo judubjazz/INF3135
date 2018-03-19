@@ -207,7 +207,7 @@ void createDotFile(const struct Maze *maze, const struct Arguments *arguments){
     char graph_string [1000];
     strcat(graph_string,"struct graph {\n  node [shape=box];\n");
     char s[64];
-    char * string;
+//    char * string;
     char file_name[128];
     // create a FILE typed pointer
     FILE *file_pointer;
@@ -232,12 +232,12 @@ void createDotFile(const struct Maze *maze, const struct Arguments *arguments){
         }
     }
 
-    for (i = 0; i < maze->numRows; ++i) {
-        for (j = 0; j < maze->numCols; ++j) {
-            string = Drawing_drawRoomForDotFile(cr, &maze->rooms[i][j], i, j,
-                             &color);
-        }
-    }
+//    for (i = 0; i < maze->numRows; ++i) {
+//        for (j = 0; j < maze->numCols; ++j) {
+//            string = Drawing_drawRoomForDotFile(cr, &maze->rooms[i][j], i, j,
+//                             &color);
+//        }
+//    }
     if (arguments->withSolution) {
 //        Drawing_drawSolution(cr, maze->path);
     }

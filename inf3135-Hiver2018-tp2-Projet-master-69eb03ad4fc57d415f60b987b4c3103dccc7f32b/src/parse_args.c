@@ -204,7 +204,6 @@ struct Arguments parseArguments(int argc, char **argv, bool argv_is_json, json_t
         arguments.endRoomi = arguments.numRows - 1;
         arguments.endRoomj = arguments.numCols - 1;
     }
-    int test = optind;
     if (optind < argc) {
         printf("Error: too many arguments\n");
         printUsage(argv);
