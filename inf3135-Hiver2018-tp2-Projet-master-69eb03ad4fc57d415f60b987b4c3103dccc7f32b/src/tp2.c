@@ -51,18 +51,17 @@ int main(int argc, char **argv) {
     json_t *root;
     json_error_t error;
     char *string;
+    bool argv_is_json = true;
 
-    string = ReadFile("/home/ju/JetBrainsProjects/CLionProjects/INF3135_tp2/param.json");
+    string = ReadFile(argv[1]);
     root = json_loads(string, 0, &error);
     free(string);
 
     if (!json_is_object(root)) {
-        fprintf(stderr, "error: commit data  is not an object\n");
-        json_decref(root);
-        return 1;
+        argv_is_json = false;
     }
 
-    bool argv_is_json = true;
+
     struct Arguments arguments = parseArguments(argc, argv, argv_is_json, root);
     if (arguments.status != TP2_OK) {
         return arguments.status;
