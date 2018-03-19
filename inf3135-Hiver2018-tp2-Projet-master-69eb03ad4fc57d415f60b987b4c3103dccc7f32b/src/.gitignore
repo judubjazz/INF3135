@@ -1,0 +1,5 @@
+*.o
+*.png
+tp2
+test*
+!test*.c

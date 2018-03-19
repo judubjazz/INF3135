@@ -1,0 +1,22 @@
+strict graph {
+  node [shape=box];
+  "(0,0)" [label="0,0", pos="0,0!"];
+  "(0,1)" [label="0,1", pos="1,0!"];
+  "(0,2)" [label="0,2", pos="2,0!"];
+  "(1,0)" [label="1,0", pos="0,-1!"];
+  "(1,1)" [label="1,1", pos="1,-1!"];
+  "(1,2)" [label="1,2", pos="2,-1!"];
+  "(0,1)" -- "(0,0)";
+  "(0,1)" -- "(1,1)";
+  "(1,1)" -- "(0,1)";
+  "(1,1)" -- "(1,0)";
+  "(1,2)" -- "(0,2)";
+  "(1,2)" -- "(1,1)";
+  "(0,0)" [style=filled, fillcolor=azure, color=blue, penwidth=3];
+  "(0,1)" [style=filled, fillcolor=azure, color=blue, penwidth=3];
+  "(0,0)" -- "(0,1)" [penwidth=3, color=blue];
+  "(1,1)" [style=filled, fillcolor=azure, color=blue, penwidth=3];
+  "(0,1)" -- "(1,1)" [penwidth=3, color=blue];
+  "(1,2)" [style=filled, fillcolor=azure, color=blue, penwidth=3];
+  "(1,1)" -- "(1,2)" [penwidth=3, color=blue];
+}
